@@ -1,15 +1,19 @@
 
 <script>
+    import Header from "./Header.svelte"
+    import Footer from "./Footer.svelte"
     import DataTable, {Head, Body, Row, Cell} from "@smui/data-table";
 
     export let name;
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </svelte:head>
 
 <main>
+    <Header/>
+
     <h1>Hello {name}!</h1>
     <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 
@@ -40,6 +44,7 @@
         </Body>
     </DataTable>
 
+    <Footer/>
 </main>
 
 <style>
